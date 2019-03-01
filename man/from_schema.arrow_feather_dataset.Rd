@@ -5,18 +5,20 @@
 \title{Create an Arrow Dataset for reading record batches from Arrow feather files,
 inferring output types and shapes from the given Arrow schema.}
 \usage{
-\method{from_schema}{arrow_feather_dataset}(object, filenames, schema,
-  columns = NULL, ...)
+\method{from_schema}{arrow_feather_dataset}(object, schema,
+  columns = NULL, host = NULL, filenames = NULL, ...)
 }
 \arguments{
-\item{object}{An \code{ArrowDataset} object.}
-
-\item{filenames}{A \code{tf.string} tensor, list or scalar containing files in
-Arrow Feather format.}
+\item{object}{An \R object.}
 
 \item{schema}{Arrow schema defining the record batch data in the stream.}
 
 \item{columns}{A list of column indices to be used in the Dataset.}
+
+\item{host}{Not used.}
+
+\item{filenames}{A \code{tf.string} tensor, list or scalar containing files in
+Arrow Feather format.}
 
 \item{...}{Optional arguments passed on to implementing methods.}
 }

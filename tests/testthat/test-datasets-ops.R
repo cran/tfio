@@ -18,7 +18,7 @@ test_succeeds("kafka_dataset() works successfully", {
 test_succeeds("ignite_dataset() works successfully", {
   skip_on_travis()
   dataset <- ignite_dataset(
-      cache_name = "SQL_PUBLIC_TEST_CACHE", port = 42300)
+      cache_name = "SQL_PUBLIC_TEST_CACHE", port = 10800)
   iterate_all_batches(dataset)
 })
 
@@ -47,6 +47,22 @@ test_succeeds("video_dataset() works successfully", {
   skip_on_travis()
   dataset <- video_dataset(
     filenames = list("testdata/small.mp4")) %>%
+    dataset_repeat(2)
+  iterate_all_batches(dataset)
+})
+
+test_succeeds("lmdb_dataset() works successfully", {
+  skip_on_travis()
+  dataset <- lmdb_dataset(
+    filenames = list("testdata/data.mdb")) %>%
+    dataset_repeat(2)
+  iterate_all_batches(dataset)
+})
+
+test_succeeds("tiff_dataset() works successfully", {
+  skip_on_travis()
+  dataset <- tiff_dataset(
+      filenames = list("testdata/small.tiff")) %>%
     dataset_repeat(2)
   iterate_all_batches(dataset)
 })

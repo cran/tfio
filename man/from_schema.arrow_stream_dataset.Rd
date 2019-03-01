@@ -5,18 +5,20 @@
 \title{Create an Arrow Dataset from an input stream, inferring output types and
 shapes from the given Arrow schema.}
 \usage{
-\method{from_schema}{arrow_stream_dataset}(object, host, schema,
-  columns = NULL, ...)
+\method{from_schema}{arrow_stream_dataset}(object, schema,
+  columns = NULL, host = NULL, filenames = NULL, ...)
 }
 \arguments{
-\item{object}{An \code{ArrowDataset} object.}
-
-\item{host}{A \code{tf.string} tensor or string defining the input stream.
-For a socket client, use "<HOST_IP>:<PORT>", for stdin use "STDIN".}
+\item{object}{An \R object.}
 
 \item{schema}{Arrow schema defining the record batch data in the stream.}
 
 \item{columns}{A list of column indices to be used in the Dataset.}
+
+\item{host}{A \code{tf.string} tensor or string defining the input stream.
+For a socket client, use "<HOST_IP>:<PORT>", for stdin use "STDIN".}
+
+\item{filenames}{Not used.}
 
 \item{...}{Optional arguments passed on to implementing methods.}
 }
