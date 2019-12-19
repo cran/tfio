@@ -1,7 +1,7 @@
 Package: tfio
 Type: Package
 Title: Interface to 'TensorFlow IO'
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: c(
   person("TensorFlow IO Contributors", role = c("aut", "cph"),
          email = "io@tensorflow.org",
@@ -17,17 +17,18 @@ Description: Interface to 'TensorFlow IO', Datasets and filesystem extensions ma
 License: Apache License 2.0
 URL: https://github.com/tensorflow/io
 BugReports: https://github.com/tensorflow/io/issues
-SystemRequirements: TensorFlow >= 1.4 (https://www.tensorflow.org/)
+SystemRequirements: TensorFlow >= 1.13.0 (https://www.tensorflow.org/)
+        and TensorFlow IO >= 0.4.0 (https://github.com/tensorflow/io)
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.1)
 Imports: reticulate (>= 1.10), tensorflow (>= 1.9), tfdatasets (>=
         1.9), forge, magrittr
-RoxygenNote: 6.1.0
+RoxygenNote: 7.0.2
 Suggests: testthat, knitr
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2019-03-01 03:20:20 UTC; yuan.tang
+Packaged: 2019-12-19 14:00:25 UTC; yuan.tang
 Author: TensorFlow IO Contributors [aut, cph] (Full list of contributors can be
     found at <https://github.com/tensorflow/io/graphs/contributors>),
   Yuan Tang [aut, cre] (<https://orcid.org/0000-0001-5243-233X>),
@@ -36,4 +37,4 @@ Author: TensorFlow IO Contributors [aut, cph] (Full list of contributors can be
   RStudio [cph]
 Maintainer: Yuan Tang <terrytangyuan@gmail.com>
 Repository: CRAN
-Date/Publication: 2019-03-01 13:40:04 UTC
+Date/Publication: 2019-12-19 16:50:02 UTC

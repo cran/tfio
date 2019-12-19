@@ -1,7 +1,7 @@
-## ----setup, include=FALSE------------------------------------------------
+## ----setup, include=FALSE-----------------------------------------------------
 knitr::opts_chunk$set(eval = FALSE)
 
-## ---- eval=FALSE---------------------------------------------------------
+## ---- eval=FALSE--------------------------------------------------------------
 #  library(tfio)
 #  dataset <- sequence_file_dataset("R-package/tests/testthat/testdata/string.seq") %>%
 #      dataset_repeat(2)
